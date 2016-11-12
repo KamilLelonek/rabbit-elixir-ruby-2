@@ -1,0 +1,2 @@
+defmodule RabbitElixir do
+end

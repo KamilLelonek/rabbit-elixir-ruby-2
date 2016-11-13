@@ -21,10 +21,13 @@ defmodule RabbitElixir.Mixfile do
   defp apps() do
     [
       :logger,
+      :amqp,
     ]
   end
 
   defp deps() do
-    []
+    [
+      {:amqp, "0.1.4"},
+    ]
   end
 end

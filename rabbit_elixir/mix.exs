@@ -27,6 +27,7 @@ defmodule RabbitElixir.Mixfile do
 
   defp deps() do
     [
+      {:amqp_client, github: "dsrosario/amqp_client", branch: "erlang_otp_19", override: true},
       {:amqp, "0.1.4"},
     ]
   end

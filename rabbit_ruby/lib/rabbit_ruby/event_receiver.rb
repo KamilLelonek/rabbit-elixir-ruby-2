@@ -2,7 +2,6 @@ require_relative "conn_manager"
 
 module RabbitRuby
   class EventReceiver < ConnManager
-
     def start_listening
       raise "Connection not established. Call #prepare firstly!" unless self.started
 

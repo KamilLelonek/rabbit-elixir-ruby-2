@@ -17,7 +17,7 @@ defmodule RabbitElixir.EventReceiver do
     AMQP.Basic.consume(channel, queue(), nil, no_ack: true)
   end
 
-  def wait_for_messages(channel) do
+  defp wait_for_messages(channel) do
     receive do
       {:basic_deliver, payload, _meta} ->
         log_received(payload)

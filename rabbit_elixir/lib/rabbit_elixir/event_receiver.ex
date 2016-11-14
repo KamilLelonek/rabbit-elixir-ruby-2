@@ -12,7 +12,7 @@ defmodule RabbitElixir.EventReceiver do
 
   defp prepare(channel) do
     AMQP.Exchange.declare(channel, topic(), :topic)
-    AMQP.Queue.declare(channel, queue(), exclusive: true)
+    AMQP.Queue.declare(channel, queue())
     AMQP.Queue.bind(channel, queue(), topic())
     AMQP.Basic.consume(channel, queue(), nil, no_ack: true)
   end
